@@ -8,6 +8,19 @@ const LoginStyles = styled.div`
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
+
+  .Toastify__toast {
+    background-color: #fafafa;
+    color: crimson;
+  }
+
+  .Toastify__progress-bar {
+    background-color: crimson;
+  }
+
+  .Toastify__close-button > svg {
+    fill: crimson;
+  }
 `;
 
 const LoginContainer = styled.section`
@@ -47,8 +60,8 @@ const LoginLeft = styled.div`
       content: "";
       width: 3rem;
       height: 3rem;
-      border-left: 2px solid #ff635c;
-      border-top: 2px solid #ff635c;
+      border-left: 2px solid rgba(0, 0, 0, 0.5);
+      border-top: 2px solid rgba(0, 0, 0, 0.5);
       border-radius: 5px 0 0 0;
       display: block;
       position: absolute;
@@ -60,8 +73,8 @@ const LoginLeft = styled.div`
       content: "";
       width: 3rem;
       height: 3rem;
-      border-right: 2px solid #64a64e;
-      border-bottom: 2px solid #64a64e;
+      border-right: 2px solid rgba(0, 0, 0, 0.5);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
       border-radius: 0 0 5px 0;
       display: block;
       position: absolute;
@@ -129,17 +142,17 @@ const InputControl = styled.div`
 `;
 
 const FormLabel = styled.label`
-  display: block;
-  margin-bottom: 0.25rem;
+  display: ${(props) => props.display || "block"};
+  margin: ${(props) => props.margin || "0"};
 `;
 
 const FormInput = styled.input`
-  width: 100%;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #bcbcbc;
-  color: #5a5a5a;
+  width: ${(props) => props.width || "100%"};
+  padding: ${(props) => props.padding || "0.5rem 1rem"};
+  font-size: ${(props) => props.fontSize || "1rem"};
+  border-radius: ${(props) => props.borderRadius || "5px"};
+  border: ${(props) => props.border || "1px solid #bcbcbc"};
+  color: ${(props) => props.color || "#5a5a5a"};
   transition: all 0.3s ease-in;
 `;
 
