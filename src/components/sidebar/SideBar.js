@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { signOut } from "firebase/auth";
 
@@ -30,6 +31,24 @@ function SideBar({ isUser, ...props }) {
           <SideBarItems>
             <SideBarItem>
               <IconButton iconPosition="before" iconName="fas fa-sign-out-alt" iconMargin="0 0.75rem 0 0" text="Sign Out" onClick={signOutHandler} />
+            </SideBarItem>
+            <SideBarItem>
+              <Link to="/dashboard">
+                <FaIcon className="fas fa-eye" margin="0 0.75rem 0 0" />
+                View all toys
+              </Link>
+            </SideBarItem>
+            <SideBarItem>
+              <Link to="add">
+                <FaIcon className="fas fa-plus-circle" margin="0 0.75rem 0 0" />
+                Add new toy
+              </Link>
+            </SideBarItem>
+            <SideBarItem>
+              <Link to="edit">
+                <FaIcon className="fas fa-edit" margin="0 0.75rem 0 0" />
+                Edit toy
+              </Link>
             </SideBarItem>
             <SideBarItem>
               <a href="#">

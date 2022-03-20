@@ -1,5 +1,6 @@
 import React from "react";
-import { Panels } from "../panels";
+import { Outlet } from "react-router-dom";
+
 import { SideBar } from "../sidebar";
 import { MainContentStyles, MainContentWrapper } from "./styles";
 
@@ -12,7 +13,8 @@ function MainContent({ isUser, ...props }) {
       <MainContentStyles>
         <MainContentWrapper>
           <SideBar isUser={isUser} />
-          <Panels isUser={isUser} />
+          {/* <Panels isUser={isUser} /> */}
+          <Outlet />
         </MainContentWrapper>
       </MainContentStyles>
     </>

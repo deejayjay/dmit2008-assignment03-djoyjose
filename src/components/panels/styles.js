@@ -6,9 +6,7 @@ const PanelStyles = styled.section`
 `;
 
 const PanelTitleBar = styled.div`
-  align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 1rem;
 `;
 
 const PanelTitle = styled.h2`
@@ -17,6 +15,7 @@ const PanelTitle = styled.h2`
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1;
+  padding: 0 1rem;
 
   @media only screen and (min-width: 768px) {
     font-size: 1.5rem;
