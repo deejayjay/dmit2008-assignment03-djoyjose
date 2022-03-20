@@ -28,11 +28,7 @@ const SideBarStyles = styled.div`
   }
 `;
 
-const SideBarItems = styled.ul`
-  .btn-signout {
-    font-weight: 700;
-  }
-`;
+const SideBarItems = styled.ul``;
 
 const SideBarItem = styled.li`
   transition: all 0.3s ease-in-out;
@@ -57,9 +53,18 @@ const SideBarItem = styled.li`
   &:first-of-type {
     margin-bottom: 1rem;
 
+    button {
+      display: block;
+      width: calc(100% - 2rem);
+      margin: 0 1rem;
+
+      &:hover {
+        background-color: #edae0cb3;
+      }
+    }
+
     &:hover {
       border-bottom: 1px solid #ffffff;
-      background-color: #ecad0d;
     }
   }
 
