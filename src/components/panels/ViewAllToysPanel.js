@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 
 import { auth } from "libs/firebase";
 import { PanelCardsContainer, PanelStyles, PanelTitle, PanelTitleBar } from "./styles";
+import { ProductCard } from "components/ProductCard";
 
 function ViewAllToysPanel({ title, ...props }) {
   const [isUser, setIsUser] = useState(false);
@@ -28,7 +29,16 @@ function ViewAllToysPanel({ title, ...props }) {
           <PanelTitleBar>
             <PanelTitle>{title || "Panel Title"}</PanelTitle>
           </PanelTitleBar>
-          <PanelCardsContainer>{/* Add Product Cards here */}</PanelCardsContainer>
+          <PanelCardsContainer>
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </PanelCardsContainer>
         </PanelStyles>
       </>
     );

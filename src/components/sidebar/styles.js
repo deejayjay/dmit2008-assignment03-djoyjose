@@ -19,7 +19,7 @@ const SideBarStyles = styled.div`
 
   @media only screen and (min-width: 768px) {
     display: block;
-    height: calc(100vh - 61px);
+    min-height: calc(100vh - 61px);
     position: static;
     z-index: 0;
     min-width: 15rem;

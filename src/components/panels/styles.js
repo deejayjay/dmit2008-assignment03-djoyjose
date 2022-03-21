@@ -24,10 +24,27 @@ const PanelTitle = styled.h2`
 `;
 
 const PanelCardsContainer = styled.section`
-  box-shadow: 0 0 5px 2px #ababab;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.3);
   margin-top: 1rem;
+  padding: 1.5rem;
   border-radius: 5px;
-  height: 40rem;
+  min-height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 1.5rem;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;
 
 export { PanelStyles, PanelTitleBar, PanelTitle, PanelCardsContainer };
